@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File View</title>
+    <script src="logic.js"></script>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Datei-Upload</h1>
+<input type="file" id="fileInput" />
+<button id="uploadBtn">Datei hochladen</button>
+<button id="deleteBtn">Datei löschen</button>
+
+<h2>Hochgeladene Datei</h2>
+<table id="fileTable">
+    <thead>
+    <tr id="tableHeader"></tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script src="logic.js"></script>
+
+</body>
+</html>
