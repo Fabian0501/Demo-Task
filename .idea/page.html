@@ -62,6 +62,7 @@
 <button id="text" onclick="showFormText()">Choose Text</button>
 <hr>
 
+
 <div id="formContainer">
     <h4>Note: A file can only be uploaded if a name and a file are chosen</h4>
     <label for="userName">Name:</label>
@@ -71,6 +72,7 @@
     <input type="file" id="fileInput"/>
     <button type="button" id="uploadBtn" onclick="uploadFiles()">Upload file</button>
 </div>
+
 
 <div class="input-container" id="inputContainer">
     <h4>Note: A file can only be uploaded if the name and the textarea aren't empty</h4>
@@ -83,8 +85,10 @@
     <button type="button" id="uploadBtn2" onclick="uploadText()" style="margin-left: 20px;">Upload file</button>
 </div>
 
+
 <hr id="line">
 <h2 id="header">Uploaded Files</h2>
+
 
 <table id="fileTable">
     <thead>
@@ -97,5 +101,7 @@
     </thead>
     <tbody id="tableBody"></tbody>
 </table>
+
+
 </body>
 </html>
