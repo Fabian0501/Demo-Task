@@ -111,7 +111,7 @@ function uploadText() {
     titleCell.textContent = fileNameInput.value;
     authorCell.textContent = userNameInput.value;
     previewCell.textContent = textArea.value;
-    actionsCell.innerHTML = '<button onclick="deleteRow(this)">Löschen</button>';
+    actionsCell.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
 
     textArea.value = '';
     userNameInput.value = '';
