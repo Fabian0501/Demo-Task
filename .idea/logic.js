@@ -68,7 +68,7 @@ function uploadFiles() {
     const url = URL.createObjectURL(file);
     titleCell.textContent = file.name;
     authorCell.textContent = userNameInput.value;
-    actionsCell.innerHTML = '<button onclick="deleteRow(this)">Löschen</button>';
+    actionsCell.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
 
     if (file.type === "application/pdf") {
         previewCell.innerHTML = `<iframe src="${url}"></iframe>`;
