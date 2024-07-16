@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File View</title>
     <script src="logic.js"></script>
 
@@ -9,25 +10,92 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            border: 2px solid #57AEFF;
+        }
+
+        th, td {
+            border: 1px solid #D0E8FF;
+            padding: 8px;
+            text-align: left;
+        }
+
+
+        button {
+            border-radius: 10px;
+            padding: 14px;
+            background-color: rgba(87, 174, 255, 20%);
+            border: none;
+        }
+
+        input {
+            margin-left: 10px;
+            font-size: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            border: solid #57AEFF33;
+        }
+
+        .input-container textarea {
+            width: 60%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
         }
     </style>
+
 </head>
 <body>
 
-<h1>Datei-Upload</h1>
-<input type="file" id="fileInput" />
-<button id="uploadBtn">Datei hochladen</button>
-<button id="deleteBtn">Datei löschen</button>
+<h1>File-Upload</h1>
+<hr>
+<h3> Please choose the style of uploading </h3>
 
-<h2>Hochgeladene Datei</h2>
+<button id="file" onclick="showFormFile()">Choose File</button>
+<button id="text" onclick="showFormText()">Choose Text</button>
+<hr>
+
+<div id="formContainer">
+    <h4>Note: A file can only be uploaded if a name and a file are chosen</h4>
+    <label for="userName">Name:</label>
+    <input type="text" id="userName" placeholder="Your name"/>
+    <br>
+    <br>
+    <input type="file" id="fileInput"/>
+    <button type="button" id="uploadBtn" onclick="uploadFiles()">Upload file</button>
+</div>
+
+<div class="input-container" id="inputContainer">
+    <h4>Note: A file can only be uploaded if the name and the textarea aren't empty</h4>
+    <textarea placeholder="Write something down..." id="inputText"></textarea>
+    <br>
+    <label for="userName">Name:</label>
+    <input type="text" id="userName2" placeholder="Your name"/>
+    <label for="fileName" style="margin-left: 20px;">File:</label>
+    <input type="text" id="fileName2" placeholder="File name"/>
+    <button type="button" id="uploadBtn2" onclick="uploadText()" style="margin-left: 20px;">Upload file</button>
+</div>
+
+<hr id="line">
+<h2 id="header">Uploaded Files</h2>
+
 <table id="fileTable">
     <thead>
-    <tr id="tableHeader"></tr>
+    <tr id="tableHeader">
+        <th> Title</th>
+        <th> Author</th>
+        <th> Preview</th>
+        <th> Actions</th>
+    </tr>
     </thead>
     <tbody id="tableBody"></tbody>
 </table>
-
-<script src="logic.js"></script>
-
 </body>
 </html>
