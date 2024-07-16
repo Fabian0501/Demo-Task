@@ -34,6 +34,14 @@ function showFormText() {
 }
 
 
+/**
+ * Handles file upload, validating inputs before processing and displaying the uploaded file.
+ * Ensures the username and file inputs are not empty, alerting the user if they are.
+ * If inputs are valid, it displays the header and file table, creates a new row in the table,
+ * and populates it with the file details.
+ * The file is temporarily stored for display, with special handling for PDF files to show a preview.
+ * Finally, resets the file and username input fields.
+ */
 function uploadFiles() {
     const fileInput = document.getElementById('fileInput');
     const userNameInput = document.getElementById('userName');
@@ -72,6 +80,15 @@ function uploadFiles() {
     userNameInput.value = '';
 }
 
+
+
+/**
+ * Handles the upload of user-entered text, validating inputs before processing and displaying the text.
+ * Ensures the username, file name, and text area inputs are not empty, alerting the user if any are missing.
+ * If inputs are valid, it displays the header and file table, creates a new row in the table,
+ * and populates it with the file details including a preview of the entered text.
+ * Finally, resets the text area, username, and file name input fields.
+ */
 function uploadText() {
     const textArea = document.getElementById('inputText');
     const userNameInput = document.getElementById('userName2');
@@ -101,6 +118,14 @@ function uploadText() {
     fileNameInput.value = '';
 }
 
+
+
+/**
+ * Deletes a row from the table and hides the table if no rows remain.
+ * Finds the row containing the delete button that was clicked, removes the row from the table,
+ * and checks if there are any remaining rows in the table body.
+ * If no rows remain, hides the file table, header, and line elements.
+ */
 function deleteRow(button) {
     const row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
