@@ -10,7 +10,7 @@
 <img width="1795" alt="Screenshot 2024-07-16 at 17 28 46" src="https://github.com/user-attachments/assets/4f67c271-eb1a-4523-ba3f-e1494156d859">
 
 ## Upload a file
-<img width="1800" alt="Screenshot 2024-07-16 at 17 29 46" src="https://github.com/user-attachments/assets/ba7d0978-a3a8-4246-9dfe-d847744bc400">
+<img width="1800" alt="Screenshot 2024-07-16 at 17 36 52" src="https://github.com/user-attachments/assets/13202136-a3a2-4f54-b02f-d4b6e5ea8df9">
 
 ## Uploading text
-<img width="1793" alt="Screenshot 2024-07-16 at 17 31 04" src="https://github.com/user-attachments/assets/c4f75b3c-a324-47a1-8cff-0bbb387c8ee6">
+<img width="1794" alt="Screenshot 2024-07-16 at 17 38 13" src="https://github.com/user-attachments/assets/b2db83b7-4efa-4c9e-b96a-263ed4b89999">
