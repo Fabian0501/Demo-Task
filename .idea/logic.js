@@ -1,3 +1,8 @@
+/**
+ * Sets default views upon DOM Content Loaded.
+ * Hides the elements with IDs 'fileTable', 'formContainer', 'header',
+ * 'inputContainer', and 'line' when the DOM is fully loaded.
+ */
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('fileTable').style.display = "none";
     document.getElementById('formContainer').style.display = "none";
@@ -7,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+/**
+ * Toggles visibility of form elements to ensure only one is displayed at a time.
+ * Used in combination with 'showFormText()' to guarantee that only one of the two elements is visible at any time.
+ */
 function showFormFile() {
     const inputContainer = document.getElementById('inputContainer');
     if (inputContainer.style.display === "block") {
@@ -41,23 +50,22 @@ function uploadFiles() {
     document.getElementById('header').style.display = "block";
     document.getElementById('fileTable').style.display = "table";
 
-    for (const file of fileInput.files) {
-        const newRow = document.getElementById('tableBody').insertRow();
-        const titleCell = newRow.insertCell(0);
-        const authorCell = newRow.insertCell(1);
-        const previewCell = newRow.insertCell(2);
-        const actionsCell = newRow.insertCell(3);
+    const file = fileInput.files[0];
+    const newRow = document.getElementById('tableBody').insertRow();
+    const titleCell = newRow.insertCell(0);
+    const authorCell = newRow.insertCell(1);
+    const previewCell = newRow.insertCell(2);
+    const actionsCell = newRow.insertCell(3);
 
-        const url = URL.createObjectURL(file);
-        titleCell.textContent = file.name;
-        authorCell.textContent = userNameInput.value;
-        actionsCell.innerHTML = '<button onclick="deleteRow(this)">Löschen</button>';
+    const url = URL.createObjectURL(file);
+    titleCell.textContent = file.name;
+    authorCell.textContent = userNameInput.value;
+    actionsCell.innerHTML = '<button onclick="deleteRow(this)">Löschen</button>';
 
-        if (file.type === "application/pdf") {
-            previewCell.innerHTML = `<iframe src="${url}"></iframe>`;
-        } else {
-            previewCell.textContent = "No preview available";
-        }
+    if (file.type === "application/pdf") {
+        previewCell.innerHTML = `<iframe src="${url}"></iframe>`;
+    } else {
+        previewCell.textContent = "No preview available";
     }
 
     fileInput.value = '';
